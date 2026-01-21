@@ -1,5 +1,5 @@
 # esnet-netauto-retreat-2026
-Welcome to Asma's NetAuto topic — "AI as an Augmentation Tool (not a replacement)". This repository contains code, exercises, and supporting materials designed to help YOU developers explore practical AI workflows and use AI to augment their work. Enjoy learning and experimenting!
+Welcome to Asma's NetAuto topic — "AI as an Augmentation Tool (not a replacement)". This repository contains code, exercises, and supporting materials designed to help YOU developers explore practical AI workflows and use AI to augment your work. Enjoy learning and experimenting!
 ## Table of Contents
 - [esnet-netauto-retreat-2026](#esnet-netauto-retreat-2026)
   - [Table of Contents](#table-of-contents)
