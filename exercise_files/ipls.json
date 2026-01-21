@@ -1,0 +1,94 @@
+{
+  "ipl": {
+    "v4-ipl-one-prefix": [
+      {
+        "ip_prefixes": "0.0.0.0/0",
+        "type": "range",
+        "start": 0,
+        "end": 32
+      }
+    ],
+    "v4-ipls-many-prefix": [
+      {
+        "ip_prefixes": "0.0.0.0/8",
+        "type": "exact",
+        "start": 8,
+        "end": 8
+      },
+      {
+        "ip_prefixes": "10.0.0.0/8",
+        "type": "exact",
+        "start": 8,
+        "end": 8
+      },
+      {
+        "ip_prefixes": "10.0.0.0/10",
+        "type": "exact",
+        "start": 10,
+        "end": 10
+      },
+      {
+        "ip_prefixes": "127.0.0.0/8",
+        "type": "exact",
+        "start": 8,
+        "end": 8
+      }
+    ],
+    "v4-ipl-range": [
+      {
+        "ip_prefixes": "198.100.0.0/14",
+        "type": "range",
+        "start": 14,
+        "end": 32
+      }
+    ],
+    "v6-ipl-one-prefix": [
+      {
+        "ip_prefixes": "::/0",
+        "type": "range",
+        "start": 0,
+        "end": 128
+      }
+    ],
+    "v6-ipl-many-prefixes": [
+      {
+        "ip_prefixes": "2006::/16",
+        "type": "range",
+        "start": 17,
+        "end": 48
+      },
+      {
+        "ip_prefixes": "2006::/32",
+        "type": "exact",
+        "start": 32,
+        "end": 32
+      },
+      {
+        "ip_prefixes": "2006:2100::/23",
+        "type": "range",
+        "start": 24,
+        "end": 48
+      }
+    ],
+    "v6-ipl-range": [
+      {
+        "ip_prefixes": "::/8",
+        "type": "range",
+        "start": 8,
+        "end": 128
+      },
+      {
+        "ip_prefixes": "100::/8",
+        "type": "range",
+        "start": 8,
+        "end": 128
+      },
+      {
+        "ip_prefixes": "200::/7",
+        "type": "range",
+        "start": 7,
+        "end": 128
+      }
+    ]
+  }
+}
