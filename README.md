@@ -38,6 +38,7 @@ Ensure the following before starting:
 
  - Wait for `@asma` to add you as a collaborator to this repository — you'll receive an invitation you must accept before pushing.
 
+- Generate an SSH key in your local machine.
  > ⚠️ **IMPORTANT — do NOT overwrite existing SSH keys**
  >
  > When generating a new SSH key, pick a unique filename so you don't replace an existing identity (for example `~/.ssh/id_ed25519_esnet`). Pass that filename to `ssh-keygen` with `-f`.
