@@ -12,17 +12,13 @@ with open(config_path, 'r') as file:
 
 for entry in prefix_dict.values():
         for v in entry.values():
-            for dic in v:
-                prefix = dic.get('ip_prefixes')
-                prefix_type = dic.get('type')
+            for dict in v:
+                prefix = dict.get('ip_prefixes')
+                prefix_type = dict.get('type')
 
-                try:
-                    if prefix_type == 'range':
-                        prefix_list.append(prefix)
-                except ValueError as err:
-                    print ('*' *55)
-                    print (f"INFO: '{prefix}' is not a valid prefix value.")
-                    print ('*' *55)
+                if prefix_type == 'range':
+                    prefix_list.append(prefix)
+              
 
 print() 
 print (f"A total of {len(prefix_list)} prefixes with type = 'range' have been found: {prefix_list}")
