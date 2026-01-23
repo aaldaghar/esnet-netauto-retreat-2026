@@ -29,5 +29,5 @@ for entry in prefix_dict.values():
 
 print()
 print ("List of V4 prefixes: ",v4_list)
-print("List V6 prefixes: ",v6_list)
+print("List of V6 prefixes: ",v6_list)
 print()
