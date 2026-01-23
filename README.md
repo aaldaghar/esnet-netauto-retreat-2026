@@ -34,6 +34,25 @@ This repository is a hands-on lab. You'll write Python scripts that parse the pr
 
 Ensure the following before starting:
 
+- Sign up for a GitHub account (if you don't have one) and share your GitHub username with `@asma` so she can invite you to the repository as a collaborator.
+
+ - Wait for `@asma` to add you as a collaborator to this repository — you'll receive an invitation you must accept before pushing.
+
+ - Create an SSH keypair on your machine and add the public key to your GitHub account so you can pull/push via SSH. Example (macOS):
+
+  ```bash
+  # generate an ed25519 key (recommended)
+  ssh-keygen -t ed25519 -C "your_email@example.com"
+
+  # start the ssh-agent and add the key
+  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
+  # copy the public key to clipboard and paste into GitHub > Settings > SSH and GPG keys
+  cp < ~/.ssh/id_ed25519.pub
+  ```
+
+  After that you should be able to clone/pull/push with the SSH URL (for example `git@github.com:aaldaghar/esnet-netauto-retreat-2026.git`).
+
 - Git (configured with `user.name` and `user.email`). Example:
 
   `git config --global user.name "Your Name"`
@@ -43,13 +62,13 @@ Ensure the following before starting:
 - Python 3.8+
 - Clone the repo and create a branch:
 
-  `git clone <repo-url>`
+  `git clone git@github.com:aaldaghar/esnet-netauto-retreat-2026.git`
 
   `cd esnet-netauto-retreat-2026`
 
   `git checkout -b <your-branch>`
 
-- Create your personal folder under `team_files/`, e.g. `team_files/asma/`, and add or copy the two exercise files: `split.py` and `range_only.py`.
+
 - (Optional) Create an account on https://claude.ai if you plan to use it as an AI assistant during the exercises.
 
 ## Exercises
