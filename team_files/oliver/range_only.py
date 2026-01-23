@@ -25,6 +25,6 @@ for entry in prefix_dict.values():
                     print ('*' *55)
 
 print() 
-print (f"A total of {len(prefix_list)} prefixes with type = 'range' have been found: \n\n Prefixes:{prefix_list}")
+print (f"A total of {len(prefix_list)} prefixes with type = 'range' have been found: {prefix_list}")
 print()
 
