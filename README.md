@@ -38,20 +38,24 @@ Ensure the following before starting:
 
  - Wait for `@asma` to add you as a collaborator to this repository — you'll receive an invitation you must accept before pushing.
 
- - Create an SSH keypair on your machine and add the public key to your GitHub account so you can pull/push via SSH. Example (macOS):
+ > ⚠️ **IMPORTANT — do NOT overwrite existing SSH keys**
+ >
+ > When generating a new SSH key, pick a unique filename so you don't replace an existing identity (for example `~/.ssh/id_ed25519_esnet`). Pass that filename to `ssh-keygen` with `-f`.
+ >
+ > Example (macOS / Linux):
+ >
+ > ```bash
+ > # generate an ed25519 key and save it to a custom filename
+ > ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/id_ed25519_esnet
+ >
+ > # start the ssh-agent and add the key
+ > ssh-add --apple-use-keychain ~/.ssh/id_ed25519_esnet
+ >
+ > # copy the public key to clipboard and paste into GitHub > Settings > SSH and GPG keys
+ > # cat ~/.ssh/id_ed25519_esnet.pub
+ > ```
 
-  ```bash
-  # generate an ed25519 key (recommended)
-  ssh-keygen -t ed25519 -C "your_email@example.com"
-
-  # start the ssh-agent and add the key
-  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-
-  # copy the public key to clipboard and paste into GitHub > Settings > SSH and GPG keys
-  cp < ~/.ssh/id_ed25519.pub
-  ```
-
-  After that you should be able to clone/pull/push with the SSH URL (for example `git@github.com:aaldaghar/esnet-netauto-retreat-2026.git`).
+ After that you should be able to clone/pull/push with the SSH URL (for example `git@github.com:aaldaghar/esnet-netauto-retreat-2026.git`).
 
 - Git (configured with `user.name` and `user.email`). Example:
 
