@@ -25,9 +25,42 @@ def read_ipls_json():
 
 def print_split():
     data = read_ipls_json()
-    '''
-    write your code!!
-    '''
+    if data is None:
+        return
+    ipl_v6_list = []
+    ipl_v4_list = []
+    
+    ipl_data = data.get('ipl', {})
+    for ipl_name, elements in ipl_data.items():
+        for entry in elements:
+            prefixes = entry.get('ip_prefixes')
+    
+            try:
+                check_ip_address = ipaddress.ip_network(prefixes, strict=False)
+                if check_ip_address.version == 4:
+                    ipl_v4_list.append({
+                        'ipl_name' : ipl_name,
+                        'ipl_prefixes' : prefixes
+                    })
+                elif check_ip_address.version == 6:
+                    ipl_v6_list.append({
+                        'ipl_name' : ipl_name,
+                        'ipl_prefixes' : prefixes
+                    })
+            except ValueError as err:
+                print(f'Error in {prefixes} in {ipl_name}: {err}')
+    print(f'\n****Here are the Results!****')
+    print(f'\n{'*'*80}')
+    print(f'{'*'*80}')
+    print(f'There are {len(ipl_v4_list)} IPLs with IPv4 only')
+    for item in ipl_v4_list:
+        print(f'{item['ipl_name']} : {item['ipl_prefixes']}' )
+    print(f'\n{'='*80}')
+    print(f'There are {len(ipl_v6_list)} IPLs with IPv6 only')
+    for item in ipl_v6_list:
+        print(f'{item['ipl_name']} : {item['ipl_prefixes']}' )
+    print(f'\n{'='*80}')
+
 
 def main():
     print_split()
